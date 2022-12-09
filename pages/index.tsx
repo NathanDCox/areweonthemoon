@@ -10,7 +10,7 @@ const Home: React.FC<Props> = () => {
 	return (
 		<div className="container">
 			<h1>Are we on the Moon?</h1>
-			<h2>NO</h2>
+			<p className="declarative">NO</p>
 			<ElapsedTime date={new Date(Date.UTC(1972, 11, 14, 22, 54, 37))} />
 		</div>
 	)
