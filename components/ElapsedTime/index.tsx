@@ -30,7 +30,7 @@ const ElapsedTime: React.FC<Props> = ({ date }) => {
 	const seconds = Math.floor((timeDifference / 1000) % 60);
 
 	// Return the elapsed time as a string
-	return (
+	return currentDate ? (
 		<Timer>
 			<h2>Time since humans were on the Moon</h2>
 			<Number>
@@ -54,11 +54,11 @@ const ElapsedTime: React.FC<Props> = ({ date }) => {
 				<p className="label">minutes</p>
 			</Number>
 			<Number>
-				<p className="digits">{seconds}</p>
+				<p className="digits" suppressHydrationWarning={true}>{seconds}</p>
 				<p className="label">seconds</p>
 			</Number>
 		</Timer>
-	);
+	) : null;
 };
 
 export default ElapsedTime;
