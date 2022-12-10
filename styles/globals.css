@@ -3,6 +3,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  background: url("/moonscape-cropped.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 a {
@@ -14,35 +20,31 @@ a {
   box-sizing: border-box;
 }
 
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 6rem 0 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+.declarative {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
   body {
     color: white;
-    background: url("/moonscape-cropped.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
-  .container {
-    width: 100vw;
-    height: 100vh;
-    padding: 6rem 0 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
-  }
-  .declarative {
-      font-size: 4rem;
-      font-weight: 700;
-      margin: 0;
   }
 }
